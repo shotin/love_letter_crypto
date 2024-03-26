@@ -1,55 +1,55 @@
-// import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { BsHeartFill, BsQuote } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
-import { TwitterTweetEmbed } from "react-twitter-embed";
+// import { TwitterTweetEmbed } from "react-twitter-embed";
 import { FaEye, FaRetweet } from "react-icons/fa6";
 import { FaReply } from "react-icons/fa";
 import "./page.css";
 
 function Post() {
   const navigate = useNavigate();
-  //   const [countdown, setCountdown] = useState("");
+  const [countdown, setCountdown] = useState("");
 
-  //   useEffect(() => {
-  //     const today = new Date();
-  //     const targetDate = new Date(today.getTime() + 30 * 24 * 60 * 60 * 1000);
+  useEffect(() => {
+    const today = new Date();
+    const targetDate = new Date(today.getTime() + 30 * 24 * 60 * 60 * 1000);
 
-  //     const interval = setInterval(() => {
-  //       const now = new Date().getTime();
-  //       const distance = targetDate - now;
+    const interval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
 
-  //       const days = Math.floor(
-  //         (distance % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24)
-  //       );
-  //       const hours = Math.floor(
-  //         (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  //       );
-  //       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  //       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      const days = Math.floor(
+        (distance % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24)
+      );
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  //       const countdownStr = `${days}d${days !== 1 ? "" : ""}, ${hours}h${
-  //         hours !== 1 ? "" : ""
-  //       }, ${minutes}m${minutes !== 1 ? "" : ""}, ${seconds}s${
-  //         seconds !== 1 ? "" : ""
-  //       }`;
+      const countdownStr = `${days}d${days !== 1 ? "" : ""}, ${hours}h${
+        hours !== 1 ? "" : ""
+      }, ${minutes}m${minutes !== 1 ? "" : ""}, ${seconds}s${
+        seconds !== 1 ? "" : ""
+      }`;
 
-  //       setCountdown(countdownStr);
+      setCountdown(countdownStr);
 
-  //       if (distance < 0) {
-  //         clearInterval(interval);
-  //         setCountdown("EXPIRED");
-  //       }
-  //     }, 1000);
+      if (distance < 0) {
+        clearInterval(interval);
+        setCountdown("EXPIRED");
+      }
+    }, 1000);
 
-  //     return () => clearInterval(interval);
-  //   }, []);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div
       className="container-fluid p-0 app__post"
       style={{
         backgroundColor: "#070209",
-        height: "100%",
+        height: "100vh",
       }}
     >
       <nav className="navbar navbar-expand-lg ">
@@ -112,7 +112,7 @@ function Post() {
               <br />
               <small>SEASON LEFT</small>
               <h4 className="text-uppercase" style={{ color: "#FF368B" }}>
-                20:34:23:34
+                {countdown}
               </h4>
             </div>
           </div>
@@ -124,11 +124,11 @@ function Post() {
                 $GMRX
               </p>
 
-              <div className="twitter__link">
+              {/* <div className="twitter__link">
                 <TwitterTweetEmbed tweetId={"1771438481069273284"} />
-              </div>
+              </div> */}
 
-              <div className="row twitter__link">
+              <div className="row twitter__link text-left">
                 <div className="col-sm-4">
                   <div>
                     <p className="mt-4" style={{ color: "#C1C1C1" }}>

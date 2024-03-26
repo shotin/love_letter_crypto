@@ -48,14 +48,14 @@ function Home() {
           backgroundImage: "url('/game.png')",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          height: "120vh",
+          height: "105vh",
         }}
       >
         <div
           className="d-flex justify-content-center align-items-center"
-          style={{ height: "80%" }}
+          style={{ height: "70%" }}
         >
-          <div className="text-light p-3">
+          <div className="text-light ">
             <h5 className="mb-4 text-center ">$GMRX rewards with</h5>
             <p
               onClick={handleConnectTwitter}
