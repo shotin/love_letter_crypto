@@ -1,0 +1,15 @@
+body {
+    overflow-x: hidden;
+}
+
+@media(max-width: 700px) {
+    .twitter__link {
+        padding: 30px;
+    }
+}
+
+@media(min-width: 900px) {
+    .twitter__link {
+        margin-left: 130px !important;
+    }
+}
