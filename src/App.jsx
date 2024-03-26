@@ -1,11 +1,11 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { routes } from "./routing/routes";
 import NotFound from "./component/NotFound/NotFound";
 
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           {routes.map((route, index) => (
             <Route
@@ -23,7 +23,7 @@ function App() {
           ))}
           <Route path="*" element={<NotFound />} /> {/* Wildcard route */}
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }

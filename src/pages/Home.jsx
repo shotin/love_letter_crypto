@@ -48,7 +48,7 @@ function Home() {
           backgroundImage: "url('/game.png')",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          height: "100vh",
+          height: "100%",
         }}
       >
         <div
