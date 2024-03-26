@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { BsHeartFill, BsQuote } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import { TwitterTweetEmbed } from "react-twitter-embed";
@@ -8,41 +8,41 @@ import "./page.css";
 
 function Post() {
   const navigate = useNavigate();
-  const [countdown, setCountdown] = useState("");
+  //   const [countdown, setCountdown] = useState("");
 
-  useEffect(() => {
-    const today = new Date();
-    const targetDate = new Date(today.getTime() + 30 * 24 * 60 * 60 * 1000);
+  //   useEffect(() => {
+  //     const today = new Date();
+  //     const targetDate = new Date(today.getTime() + 30 * 24 * 60 * 60 * 1000);
 
-    const interval = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
+  //     const interval = setInterval(() => {
+  //       const now = new Date().getTime();
+  //       const distance = targetDate - now;
 
-      const days = Math.floor(
-        (distance % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24)
-      );
-      const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  //       const days = Math.floor(
+  //         (distance % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24)
+  //       );
+  //       const hours = Math.floor(
+  //         (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  //       );
+  //       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  //       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      const countdownStr = `${days}d${days !== 1 ? "" : ""}, ${hours}h${
-        hours !== 1 ? "" : ""
-      }, ${minutes}m${minutes !== 1 ? "" : ""}, ${seconds}s${
-        seconds !== 1 ? "" : ""
-      }`;
+  //       const countdownStr = `${days}d${days !== 1 ? "" : ""}, ${hours}h${
+  //         hours !== 1 ? "" : ""
+  //       }, ${minutes}m${minutes !== 1 ? "" : ""}, ${seconds}s${
+  //         seconds !== 1 ? "" : ""
+  //       }`;
 
-      setCountdown(countdownStr);
+  //       setCountdown(countdownStr);
 
-      if (distance < 0) {
-        clearInterval(interval);
-        setCountdown("EXPIRED");
-      }
-    }, 1000);
+  //       if (distance < 0) {
+  //         clearInterval(interval);
+  //         setCountdown("EXPIRED");
+  //       }
+  //     }, 1000);
 
-    return () => clearInterval(interval);
-  }, []);
+  //     return () => clearInterval(interval);
+  //   }, []);
 
   return (
     <div
@@ -112,7 +112,7 @@ function Post() {
               <br />
               <small>SEASON LEFT</small>
               <h4 className="text-uppercase" style={{ color: "#FF368B" }}>
-                {countdown}
+                20:34:23:34
               </h4>
             </div>
           </div>
